@@ -1,0 +1,23 @@
+.playerWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 20vh;
+    width: 20vw;
+    opacity: 0.0;
+    display: none;
+    transition: 0.8s;
+    transform: translate(-50%, -50%);
+
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media screen and ( max-width: 900px ){
+    .oobe {
+        width: 85%;
+        padding: 5%;
+    }
+}
