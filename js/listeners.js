@@ -52,6 +52,25 @@ document.getElementsByClassName('oobePrev')[0].addEventListener('click', () => {
 })
 
 addEventListener('keypress', (event) => {
+    if(event.code === 'Space') {
+        const map = document.getElementsByClassName('map')[0]
+        
+        if(map) {
+            map.click()
+        } else if(!dataFilled) {
+            dataFilled = true
+    
+            oobeStep++
+            replaceOOBEContent(oobeContentTab[oobeStep], true, false)
+        } else if(oobeStep === 5 || oobeStep === 11) {
+            document.getElementsByClassName('popupCenter')[0].click()
+        } else {
+            document.getElementsByClassName('oobeNext')[0].click()
+        }
+
+        return
+    }
+
     if(dataFilled) return
     if(oobeStep === 19 && event.key !== 'Enter') return
     dataFilled = true
