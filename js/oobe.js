@@ -5,14 +5,26 @@ const fakeCursor = () => {
     cursorOn = !cursorOn
 }
 
+const showUnsupported = (show) => {
+    if(show) {
+        document.getElementsByClassName('notSupported')[0].style.display = 'block'
+    } else {
+        document.getElementsByClassName('notSupported')[0].style.display = 'none'
+    }
+}
+
 const changeOOBESize = (sizes) => {
     if(window.innerHeight < 450) {
-        window.location.href = 'unsupported.html'
+        showUnsupported(true)
+        return
     }
 
     if(window.innerWidth < window.innerHeight / 2) {
-        window.location.href = 'unsupported.html'
+        showUnsupported(true)
+        return
     }
+
+    showUnsupported(false)
 
     if(sizes.w !== 0) {
         oobeWindow.style.width = sizes.w+'%'
