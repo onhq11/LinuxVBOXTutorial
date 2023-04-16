@@ -241,6 +241,25 @@ let oobeContentTab = [
         <h1>Krok 27</h1>
         <h2>Klikamy Enter</h2>
     </div>`,
+
+    `<div class="map" style="height: 12.5%; width: 42%; top: 41%; left: 28.5%;"></div>
+    <img src="./img/windows/28.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 28</h1>
+        <h2>Po uruchomieniu logujemy się</h2>
+    </div>`,
+
+    `<div class="map" style="height: 100%; width: 100%;"></div>
+    <img src="./img/windows/29.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 29</h1>
+        <h2>Koniec</h2>
+    </div>`,
+
+    `<h1>Instalacja systemu Ubuntu zakończona</h1>
+    <h4>Instalacja zakończona, nie wiesz co teraz? Naucz się podstawowych komend systemu, używając naszej wyszukiwarki komend dostępnej pod <a href="https://sagin.pl" target="_blank">tym linkiem</a></h4>`
 ]
 
 let oobeContentSize = [

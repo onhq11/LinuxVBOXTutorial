@@ -161,7 +161,7 @@ const replaceOOBEContent = (content, playerRunning, openPopup) => {
                 }, 8500)
             }
             
-            if(oobeStep === 3 || oobeStep === 19 || oobeStep === 25) {
+            if(oobeStep === 3 || oobeStep === 19 || oobeStep === 25 || oobeStep === 29 || oobeStep === 31) {
                 dataFilled = false
             }
 
