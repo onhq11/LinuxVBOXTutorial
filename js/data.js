@@ -162,7 +162,85 @@ let oobeContentTab = [
         <h2>Uruchamiamy maszynę na górze przyciskiem "Uruchom"</h2>
     </div>`,
 
-    `<img src="./img/windows/17.png" class="windowSS">`
+    `<img src="./img/windows/17.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 18</h1>
+        <h2>Wybierz opcję "Try or Install Ubuntu" przyciskiem Enter</h2>
+    </div>`,
+
+    `<div class="map" style="height: 5%; width: 21%; top: 60.25%; left: 66.3%;"></div>
+    <img src="./img/windows/18.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 19</h1>
+        <h2>Kliknij przycisk "Install Ubuntu"</h2>
+    </div>`,
+
+    `<div class="map" style="height: 4.5%; width: 13%; top: 78%; left: 84.5%;"></div>
+    <img src="./img/windows/19.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 20</h1>
+        <h2>Teraz wybieramy język klawiatury, kliknij przycisk "Continue"</h2>
+    </div>`,
+
+    `<div class="map" style="height: 4.5%; width: 13%; top: 78%; left: 84.5%;"></div>
+    <img src="./img/windows/20.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 21</h1>
+        <h2>Tutaj możemy ustawić typ instalacji, zostawiamy domyślnie i klikamy przycisk "Continue"</h2>
+    </div>`,
+    
+    `<div class="map" style="height: 4.5%; width: 13.5%; top: 78%; left: 83.75%;"></div>
+    <img src="./img/windows/21.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 22</h1>
+        <h2>Tutaj mamy ustawienia partycji, zostawiamy domyślnie i klikamy "Install now"</h2>
+    </div>`,
+    
+    `<div class="map" style="height: 5%; width: 14%; top: 78.2%; left: 83.5%;"></div>
+    <img src="./img/windows/22.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 23</h1>
+        <h2>Wybieramy strefę czasową i klikamy przycisk "Continue"</h2>
+    </div>`,
+    
+    `<img src="./img/windows/23.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 24</h1>
+        <h2>Tutaj uzupełniamy dane (*Kliknij dowolny przycisk*)</h2>
+    </div>`,
+    
+    `<div class="map" style="height: 4.5%; width: 14%; top: 78.2%; left: 83.5%;"></div>
+    <img src="./img/windows/24.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 25</h1>
+        <h2>Klikamy przycisk "Continue"</h2>
+    </div>`,
+
+    `<img src="./img/windows/25-1.png" class="windowSS">`,
+
+    `<div class="map" style="height: 3.5%; width: 7.75%; top: 52.5%; left: 54.2%;"></div>
+    <img src="./img/windows/26.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 26</h1>
+        <h2>Klikamy przycisk "Restart Now"</h2>
+    </div>`,
+
+    `<div class="map" style="height: 3.5%; width: 7.75%; top: 52.5%; left: 54.2%;"></div>
+    <img src="./img/windows/27.png" class="windowSS">
+    <div class="hint" style="opacity: 0.0; bottom: -30px; padding: 2.5%">
+        <div></div>
+        <h1>Krok 27</h1>
+        <h2>Klikamy Enter</h2>
+    </div>`,
 ]
 
 let oobeContentSize = [
@@ -185,5 +263,21 @@ let oobeContentSize = [
     {w: 72, h: 80},
     {w: 72, h: 80},
     {w: 72, h: 80},
-    {w: 37.75, h: 55}
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 60, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70}
 ]

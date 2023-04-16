@@ -1,7 +1,3 @@
-addEventListener('click', () => {
-    endLoading()
-})
-
 window.addEventListener('load', () => {
     startLoading()
 

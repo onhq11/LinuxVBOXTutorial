@@ -1,8 +1,27 @@
 const fakeCursor = () => {
-    if(oobeStep !== 3) return
+    let img
+    if(oobeStep === 3) {
+        img = "2"
+    } else if(oobeStep === 25) {
+        img = "23"
+    } else {
+        return
+    }
 
-    document.getElementsByClassName('popupCenter')[0].setAttribute('src', `./img/windows/${cursorOn ? '2-1' : '2'}.png`)
+    if(oobeStep === 3) {
+        document.getElementsByClassName('popupCenter')[0].setAttribute('src', `./img/windows/${cursorOn ? img+'-1' : img}.png`)
+    } else if(oobeStep === 25) {
+        document.getElementsByClassName('windowSS')[0].setAttribute('src', `./img/windows/${cursorOn ? img+'-1' : img}.png`)
+    }
+
     cursorOn = !cursorOn
+}
+
+let installationInterval, installationIndex = 1
+const installationLoop = () => {
+    document.getElementsByClassName('windowSS')[0].setAttribute('src', `./img/windows/25-${installationIndex}.png`)
+
+    installationIndex++
 }
 
 const showUnsupported = (show) => {
@@ -61,10 +80,11 @@ const replaceOOBEContent = (content, playerRunning, openPopup) => {
                 popupFade(true)
             }
 
-            if(oobeStep === 3) {
+            if(oobeStep === 3 || oobeStep === 25) {
                 cursorInterval = setInterval(fakeCursor, 500)
             } else {
                 clearInterval(cursorInterval)
+                clearInterval(installationInterval)
             }
 
             if(oobeStep === 8 || oobeStep === 17) {
@@ -126,11 +146,22 @@ const replaceOOBEContent = (content, playerRunning, openPopup) => {
             } else if((oobeStep === 4 || oobeStep > 5) && document.getElementsByClassName('map').length > 0) {
                 document.getElementsByClassName('map')[0].addEventListener('click', () => {
                     oobeStep++
+                    changeOOBESize(oobeContentSize[oobeStep])
                     replaceOOBEContent(oobeContentTab[oobeStep], true)
                 })
+            } else if(oobeStep === 27) {
+                installationInterval = setInterval(installationLoop, 500)
+
+                setTimeout(() => {
+                    clearInterval(installationInterval)
+
+                    oobeStep++
+                    changeOOBESize(oobeContentSize[oobeStep])
+                    replaceOOBEContent(oobeContentTab[oobeStep], true)
+                }, 8500)
             }
             
-            if(oobeStep === 3 || oobeStep === 19) {
+            if(oobeStep === 3 || oobeStep === 19 || oobeStep === 25) {
                 dataFilled = false
             }
 
