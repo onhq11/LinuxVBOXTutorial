@@ -59,6 +59,11 @@ const changeOOBESize = (sizes) => {
 }
 
 const replaceOOBEContent = (content, playerRunning, openPopup) => {
+    if(oobeStep >= 32) {
+        replaceOOBEContent(oobeContentTab[oobeStep])
+        changeOOBESize(oobeContentSize[oobeStep])
+    }
+
     if(playerRunning) {
         const playerHint = document.getElementsByClassName('hint')[0]
         
@@ -150,10 +155,14 @@ const replaceOOBEContent = (content, playerRunning, openPopup) => {
                     replaceOOBEContent(oobeContentTab[oobeStep], true)
                 })
             } else if(oobeStep === 27) {
+                installationIndex = 1
                 installationInterval = setInterval(installationLoop, 500)
 
                 setTimeout(() => {
                     clearInterval(installationInterval)
+                    if(oobeStep !== 27) {
+                        return
+                    }
 
                     oobeStep++
                     changeOOBESize(oobeContentSize[oobeStep])

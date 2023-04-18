@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAGIN - Wyszukiwarka</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<main class="oobe">
+    <div class="searchbar">
+        <input type="text" id="searchTerm" name="searchTerm" placeholder="wyszukaj komende albo opis">
+    </div>
+    <div id="searchResult"></div>
+</main>
+<script>
+    const linuxCommands = [
+        {
+            command: 'ls',
+            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        },
+        {
+            command: 'cd',
+            description: 'Zmienia bieżący katalog na podany katalog',
+        },
+        {
+            command: 'ls',
+            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        },
+        {
+            command: 'cd',
+            description: 'Zmienia bieżący katalog na podany katalog',
+        },
+        {
+            command: 'ls',
+            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        },
+        {
+            command: 'cd',
+            description: 'Zmienia bieżący katalog na podany katalog',
+        },
+        {
+            command: 'ls',
+            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        },
+        {
+            command: 'cd',
+            description: 'Zmienia bieżący katalog na podany katalog',
+        },
+        {
+            command: 'ls',
+            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        },
+        {
+            command: 'cd',
+            description: 'Zmienia bieżący katalog na podany katalog',
+        },
+        {
+            command: 'ls',
+            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        },
+        {
+            command: 'cd',
+            description: 'Zmienia bieżący katalog na podany katalog',
+        },
+        {
+            command: 'ls',
+            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        },
+        {
+            command: 'cd',
+            description: 'Zmienia bieżący katalog na podany katalog',
+        },
+        {
+            command: 'ls',
+            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        },
+        {
+            command: 'cd',
+            description: 'Zmienia bieżący katalog na podany katalog',
+        },
+        {
+            command: 'mkdir',
+            description: 'Tworzy nowy katalog',
+        },
+        {
+            command: 'rm',
+            description: 'Usuwa plik lub katalog',
+        },
+        {
+            command: 'cp',
+            description: 'Kopiuje plik lub katalog z jednej lokalizacji na inną',
+        },
+        {
+            command: 'mv',
+            description: 'Przenosi plik lub katalog z jednej lokalizacji na inną',
+        },
+        {
+            command: 'cat',
+            description: 'Wyświetla zawartość pliku',
+        }
+    ];
+
+    const searchInput = document.getElementById('searchTerm'); // Pobranie elementu inputa z id="search"
+    const searchResult = document.getElementById('searchResult'); // Pobranie elementu div z id="searchresult"
+
+    // Funkcja wyszukująca po opisie lub po komendzie
+    function search(value) {
+        const filteredCommands = linuxCommands.filter(command => {
+            return command.command.includes(value) || command.description.includes(value);
+        });
+
+        // Usunięcie poprzednich wyników z searchResult
+        while (searchResult.firstChild) {
+            searchResult.removeChild(searchResult.firstChild);
+        }
+
+        // Dodanie wyników wyszukiwania do searchResult
+        filteredCommands.forEach(command => {
+            const resultItem = document.createElement('div');
+            const commandName = document.createElement('h3');
+            const commandDescription = document.createElement('p');
+
+            commandName.textContent = command.command;
+            commandDescription.textContent = command.description;
+
+            resultItem.appendChild(commandName);
+            resultItem.appendChild(commandDescription);
+
+            searchResult.appendChild(resultItem);
+        });
+    }
+
+    search('');
+
+    // Nasłuchiwanie zmian wartości inputa
+    searchInput.addEventListener('input', (event) => {
+        const inputValue = event.target.value.toLowerCase();
+        search(inputValue);
+    });
+</script>
+
+</body>
+</html>
