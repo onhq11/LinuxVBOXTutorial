@@ -19,88 +19,396 @@
 <script>
     const linuxCommands = [
         {
-            command: 'ls',
-            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        "command": "ls",
+        "description": "Wyświetla listę plików i katalogów w bieżącym katalogu"
         },
         {
-            command: 'cd',
-            description: 'Zmienia bieżący katalog na podany katalog',
+        "command": "cd",
+        "description": "Zmienia bieżący katalog na określony"
         },
         {
-            command: 'ls',
-            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        "command": "pwd",
+        "description": "Wyświetla pełną ścieżkę bieżącego katalogu"
         },
         {
-            command: 'cd',
-            description: 'Zmienia bieżący katalog na podany katalog',
+        "command": "mkdir",
+        "description": "Tworzy nowy katalog"
         },
         {
-            command: 'ls',
-            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        "command": "rmdir",
+        "description": "Usuwa pusty katalog"
         },
         {
-            command: 'cd',
-            description: 'Zmienia bieżący katalog na podany katalog',
+        "command": "touch",
+        "description": "Tworzy pusty plik o nazwie określonej jako argument"
         },
         {
-            command: 'ls',
-            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        "command": "rm",
+        "description": "Usuwa pliki i katalogi"
         },
         {
-            command: 'cd',
-            description: 'Zmienia bieżący katalog na podany katalog',
+        "command": "cp",
+        "description": "Kopiuje plik lub katalog"
         },
         {
-            command: 'ls',
-            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        "command": "mv",
+        "description": "Przenosi lub zmienia nazwę pliku lub katalogu"
         },
         {
-            command: 'cd',
-            description: 'Zmienia bieżący katalog na podany katalog',
+        "command": "cat",
+        "description": "Wyświetla zawartość pliku"
         },
         {
-            command: 'ls',
-            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        "command": "less",
+        "description": "Wyświetla zawartość pliku jeden ekran na raz"
         },
         {
-            command: 'cd',
-            description: 'Zmienia bieżący katalog na podany katalog',
+        "command": "head",
+        "description": "Wyświetla początkowe linie pliku"
         },
         {
-            command: 'ls',
-            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        "command": "tail",
+        "description": "Wyświetla końcowe linie pliku"
         },
         {
-            command: 'cd',
-            description: 'Zmienia bieżący katalog na podany katalog',
+        "command": "grep",
+        "description": "Wyszukuje wzorzec w pliku"
         },
         {
-            command: 'ls',
-            description: 'Wyświetla listę plików i katalogów w bieżącym katalogu',
+        "command": "find",
+        "description": "Wyszukuje pliki w drzewie katalogów"
         },
         {
-            command: 'cd',
-            description: 'Zmienia bieżący katalog na podany katalog',
+        "command": "locate",
+        "description": "Wyszukuje pliki w bazie danych lokalizacji"
         },
         {
-            command: 'mkdir',
-            description: 'Tworzy nowy katalog',
+        "command": "ps",
+        "description": "Wyświetla listę procesów"
         },
         {
-            command: 'rm',
-            description: 'Usuwa plik lub katalog',
+        "command": "top",
+        "description": "Wyświetla listę procesów i ich statystyki"
         },
         {
-            command: 'cp',
-            description: 'Kopiuje plik lub katalog z jednej lokalizacji na inną',
+        "command": "kill",
+        "description": "Zabija proces o określonym identyfikatorze"
         },
         {
-            command: 'mv',
-            description: 'Przenosi plik lub katalog z jednej lokalizacji na inną',
+        "command": "ping",
+        "description": "Testuje połączenie sieciowe do określonego adresu IP lub nazwy hosta"
         },
         {
-            command: 'cat',
-            description: 'Wyświetla zawartość pliku',
+        "command": "ifconfig",
+        "description": "Wyświetla konfigurację interfejsów sieciowych"
+        },
+        {
+        "command": "iwconfig",
+        "description": "Wyświetla konfigurację interfejsów sieciowych bezprzewodowych"
+        },
+        {
+        "command": "netstat",
+        "description": "Wyświetla informacje o połączeniach sieciowych"
+        },
+        {
+        "command": "traceroute",
+        "description": "Wyświetla ścieżkę pakietów do określonego hosta"
+        },
+        {
+        "command": "ssh",
+        "description": "Umożliwia zdalne logowanie do innej maszyny za pomocą protokołu SSH"
+        },
+        {
+        "command": "scp",
+        "description": "Kopiuje pliki między maszynami za pomocą protokołu SSH"
+        },
+        {
+        "command": "ftp",
+        "description": "Umożliwia transfer plików za pomocą protokołu FTP"
+        },
+        {
+        "command": "chmod",
+        "description": "Zmienia prawa dostępu do plików i katalogów"
+        },
+        {
+        "command": "chown",
+        "description": "Zmienia właściciela plików i katalogów"
+        },
+        {
+        "command": "chgrp",
+        "description": "Zmienia grupę plików i katalogów"
+        },
+        {
+        "command": "su",
+        "description": "Zmienia użytkownika"
+        },
+        {
+        "command": "sudo",
+        "description": "Pozwala na wykonanie komendy jako inny użytkownik z uprawnieniami administratora"
+        },
+        {
+        "command": "apt",
+        "description": "Zarządza pakietami w systemie Ubuntu"
+        },
+        {
+        "command": "dpkg",
+        "description": "Zarządza pakietami w systemie Debian"
+        },
+        {
+        "command": "tar",
+        "description": "Tworzy, wyświetla lub wypakowuje archiwum tar"
+        },
+        {
+        "command": "gzip",
+        "description": "Kompresuje plik lub strumień danych za pomocą algorytmu GZIP"
+        },
+        {
+        "command": "gunzip",
+        "description": "Dekompresuje plik lub strumień danych skompresowany za pomocą algorytmu GZIP"
+        },
+        {
+        "command": "zip",
+        "description": "Kompresuje pliki w archiwum ZIP"
+        },
+        {
+        "command": "unzip",
+        "description": "Wypakowuje pliki z archiwum ZIP"
+        },
+        {
+        "command": "mount",
+        "description": "Montuje system plików"
+        },
+        {
+        "command": "umount",
+        "description": "Odłącza system plików"
+        },
+        {
+        "command": "df",
+        "description": "Wyświetla informacje o wolnej przestrzeni na dysku"
+        },
+        {
+        "command": "du",
+        "description": "Wyświetla informacje o zajętej przestrzeni na dysku"
+        },
+        {
+        "command": "ln",
+        "description": "Tworzy dowiązanie symboliczne lub twarde"
+        },
+        {
+        "command": "alias",
+        "description": "Tworzy alias dla komendy"
+        },
+        {
+        "command": "date",
+        "description": "Wyświetla lub ustawia aktualną datę i godzinę"
+        },
+        {
+        "command": "cal",
+        "description": "Wyświetla kalendarz"
+        },
+        {
+        "command": "echo",
+        "description": "Wyświetla tekst na ekranie lub przekierowuje go do pliku"
+        },
+        {
+        "command": "history",
+        "description": "Wyświetla historię poleceń"
+        },
+        {
+        "command": "who",
+        "description": "Wyświetla zalogowanych użytkowników"
+        },
+        {
+        "command": "whoami",
+        "description": "Wyświetla nazwę aktualnego użytkownika"
+        },
+        {
+        "command": "uname",
+        "description": "Wyświetla informacje o systemie"
+        },
+        {
+        "command": "uptime",
+        "description": "Wyświetla czas działania systemu oraz średnie obciążenie systemu w ciągu ostatnich 1, 5 i 15 minut"
+        },
+        {
+        "command": "free",
+        "description": "Wyświetla ilość dostępnej i używanej pamięci systemowej"
+        },
+        {
+        "command": "df",
+        "description": "Wyświetla informacje o wolnej i zajętej przestrzeni na dyskach"
+        },
+        {
+        "command": "du",
+        "description": "Wyświetla informacje o zajętości miejsca na dysku przez poszczególne pliki i foldery"
+        },
+        {
+        "command": "killall",
+        "description": "Zatrzymuje wszystkie procesy o podanej nazwie"
+        },
+        {
+        "command": "lsof",
+        "description": "Wyświetla listę otwartych plików oraz procesów, które je otworzyły"
+        },
+        {
+        "command": "whereis",
+        "description": "Wyświetla lokalizacje plików binarnych, źródeł i stron podręcznika dla podanej nazwy programu"
+        },
+        {
+        "command": "which",
+        "description": "Wyświetla lokalizację pliku wykonywalnego dla podanej nazwy programu"
+        },
+        {
+        "command": "vi",
+        "description": "Uruchamia edytor tekstu Vi"
+        },
+        {
+        "command": "emacs",
+        "description": "Uruchamia edytor tekstu Emacs"
+        },
+        {
+        "command": "nano",
+        "description": "Uruchamia edytor tekstu Nano"
+        },
+        {
+        "command": "sed",
+        "description": "Wykonuje operacje na tekście zgodnie z podanym skryptem"
+        },
+        {
+        "command": "awk",
+        "description": "Wykonuje operacje na tekście zgodnie z podanym skryptem AWK"
+        },
+        {
+        "command": "cut",
+        "description": "Wyświetla wybrane fragmenty każdej linii pliku"
+        },
+        {
+        "command": "paste",
+        "description": "Łączy kolejne linie kilku plików w jedną linię wyjściową"
+        },
+        {
+        "command": "sort",
+        "description": "Sortuje wiersze pliku tekstowego według określonego klucza"
+        },
+        {
+        "command": "uniq",
+        "description": "Usuwa duplikaty w kolejnych liniach pliku"
+        },
+        {
+        "command": "tee",
+        "description": "Zapisuje wyjście jednego polecenia jednocześnie do pliku i na ekran"
+        },
+        {
+        "command": "curl",
+        "description": "Pobiera zawartość pliku z adresu URL"
+        },
+        {
+        "command": "wget",
+        "description": "Pobiera zawartość pliku z adresu URL"
+        },
+        {
+        "command": "diff",
+        "description": "Porównuje dwa pliki linia po linii i wypisuje różnice"
+        },
+        {
+        "command": "patch",
+        "description": "Modyfikuje plik na podstawie zmian zawartych w pliku różnicowym"
+        },
+        {
+        "command": "dig",
+        "description": "Zwraca informacje o nazwie domeny lub adresie IP za pomocą protokołu DNS"
+        },
+        {
+        "command": "nslookup",
+        "description": "Zwraca informacje o nazwie domeny lub adresie IP za pomocą protokołu DNS"
+        },
+        {
+        "command": "host",
+        "description": "Zwraca informacje o nazwie domeny lub adresie IP za pomocą protokołu DNS"
+        },
+        {
+        "command": "ifup",
+        "description": "Aktywuje interfejs sieciowy"
+        },
+        {
+        "command": "ifdown",
+        "description": "Dezaktywuje interfejs sieciowy"
+        },
+        {
+        "command": "useradd",
+        "description": "Dodaje nowego użytkownika"
+        },
+        {
+        "command": "userdel",
+        "description": "Usuwa użytkownika"
+        },
+        {
+        "command": "usermod",
+        "description": "Modyfikuje ustawienia użytkownika"
+        },
+        {
+        "command": "groupadd",
+        "description": "Dodaje nową grupę"
+        },
+        {
+        "command": "groupdel",
+        "description": "Usuwa grupę"
+        },
+        {
+        "command": "groupmod",
+        "description": "Modyfikuje ustawienia grupy"
+        },
+        {
+        "command": "passwd",
+        "description": "Zmienia hasło użytkownika"
+        },
+        {
+        "command": "uname",
+        "description": "Wyświetla informacje o systemie operacyjnym"
+        },
+        {
+        "command": "shutdown",
+        "description": "Wyłącza lub restartuje system"
+        },
+        {
+        "command": "reboot",
+        "description": "Restartuje system"
+        },
+        {
+        "command": "service",
+        "description": "Zarządza usługami systemowymi"
+        },
+        {
+        "command": "systemctl",
+        "description": "Zarządza procesami systemowymi"
+        },
+        {
+        "command": "journalctl",
+        "description": "Wyświetla logi systemowe"
+        },
+        {
+        "command": "crontab",
+        "description": "Edytuje lub wyświetla listę zadań cron"
+        },
+        {
+        "command": "at",
+        "description": "Planuje wykonanie zadania w przyszłości"
+        },
+        {
+        "command": "apt-get",
+        "description": "Zarządza pakietami systemowymi"
+        },
+        {
+        "command": "apt-cache",
+        "description": "Wyświetla informacje o pakietach systemowych"
+        },
+        {
+        "command": "aptitude",
+        "description": "Zarządza pakietami systemowymi"
+        },
+        {
+        "command": "mount",
+        "description": "Montuje system plików"
         }
     ];
 

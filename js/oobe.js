@@ -59,10 +59,10 @@ const changeOOBESize = (sizes) => {
 }
 
 const replaceOOBEContent = (content, playerRunning, openPopup) => {
-    if(oobeStep >= 32) {
-        replaceOOBEContent(oobeContentTab[oobeStep])
-        changeOOBESize(oobeContentSize[oobeStep])
-    }
+    // if(oobeStep >= 32) {
+    //     replaceOOBEContent(oobeContentTab[oobeStep])
+    //     changeOOBESize(oobeContentSize[oobeStep])
+    // }
 
     if(playerRunning) {
         const playerHint = document.getElementsByClassName('hint')[0]

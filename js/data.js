@@ -259,7 +259,7 @@ let oobeContentTab = [
     </div>`,
 
     `<h1>Instalacja systemu Ubuntu zakończona</h1>
-    <h4>Instalacja zakończona, nie wiesz co teraz? Naucz się podstawowych komend systemu, używając naszej wyszukiwarki komend dostępnej pod <a href="/search/index.html" target="_blank">tym linkiem</a></h4>`
+    <h4>Instalacja zakończona, nie wiesz co teraz? Naucz się podstawowych komend systemu, używając naszej wyszukiwarki komend dostępnej pod <a href="./search/index.html" target="_blank">tym linkiem</a></h4>`
 ]
 
 let oobeContentSize = [
@@ -294,5 +294,6 @@ let oobeContentSize = [
     {w: 60, h: 70},
     {w: 37.75, h: 70},
     {w: 37.75, h: 70},
-    {w: 37.75, h: 70}
+    {w: 37.75, h: 70},
+    {w: 37.75, h: 70}   
 ]
